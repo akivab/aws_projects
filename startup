@@ -1,0 +1,14 @@
+sudo su -
+apt-get install git
+apt-get install nginx
+
+curl http://downloads.mongodb.org/linux/mongodb-linux-x86_64-1.6.4.tgz > mongo.tgz
+tar zvf mongo.tgz
+mkdir -p /data/db
+chown `id -u` /data/db
+
+curl http://nodejs.org/dist/node-v0.4.8.tar.gz > node.tgz
+tar zvf node.tgz
+
+git clone git@github.com:akivab/pim.git
+git clone git@github.com:akivab/qoobster.git
